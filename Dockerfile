@@ -1,9 +1,5 @@
 FROM ubuntu:14.04
 
-#RUN apt-get update && apt-get -y upgrade
-
-# Install the following utilities (required by poky)
-
 # Additional host packages
 
 RUN sudo apt-get update && apt-get install -y \
