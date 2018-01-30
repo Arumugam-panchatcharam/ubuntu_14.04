@@ -107,9 +107,9 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
 # Create toolchain directory required by ecm build for docsis gateway 
 
-RUN mkdir -p /opt/toolchains/stbgcc-4.8-1.6
+#RUN mkdir -p /opt/toolchains/stbgcc-4.8-1.6
 
-RUN chown -R build:build /opt
+#RUN chown -R build:build /opt
 
 
 # Disable Host Key verification.
@@ -120,13 +120,13 @@ RUN echo -e "Host *\n\tStrictHostKeyChecking no\n" > /home/build/.ssh/config
 
 RUN chown -R build:build /home/build/.ssh
 
-RUN mkdir -p /home/build/Package
+#RUN mkdir -p /home/build/Package
 
-COPY ./Package /home/build/Package/
+#COPY ./Package /home/build/Package/
 
-RUN /home/build/Package/pkgtool_setup.sh
+#RUN /home/build/Package/pkgtool_setup.sh
 
-COPY ./stbgcc-4.8-1.6 /opt/toolchains/stbgcc-4.8-1.6/
+#COPY ./stbgcc-4.8-1.6 /opt/toolchains/stbgcc-4.8-1.6/
 
 USER build
 
