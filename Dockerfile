@@ -64,6 +64,7 @@ RUN sudo apt-get update && apt-get install -y \
         flex \
         bison \
         libtool \
+	zip \
         curl \
         libfdt-dev 
 
