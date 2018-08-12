@@ -88,7 +88,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-7-jdk
 ## Install Jfrog cli utility to deploy artifacts
 #
 #RUN cd /usr/bin; curl -fL https://getcli.jfrog.io | sh
-#
+# from visual studio
 #RUN chmod 755 /usr/bin/jfrog
 
 
